@@ -10,7 +10,10 @@ public class PopupHandler extends AbstractHandler {
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		// TODO Auto-generated method stub
 		
-		System.out.println("handler");
+		HelloWorldPrinter printer = new HelloWorldPrinter();
+		String result = printer.printHelloWorld();
+		
+		System.out.println("result : " + result);
 		
 		return null;
 	}
