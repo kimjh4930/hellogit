@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="hellorcp.handlers.PopupHandler"
+            id="HelloRCP.ui.commands"
+            name="hellocommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu?after=additions">
+         <command
+               commandId="HelloRCP.ui.commands"
+               label="Hello Popup"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+
+</plugin>
