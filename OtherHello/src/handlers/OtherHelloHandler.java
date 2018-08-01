@@ -10,7 +10,10 @@ public class OtherHelloHandler extends AbstractHandler {
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		// TODO Auto-generated method stub
 		
-		System.out.println("Other Hello");
+		NewPrinter newPrinter = new NewPrinter();
+		String result = newPrinter.printHello();
+		
+		System.out.println("result : " + result);
 		
 		return null;
 	}
